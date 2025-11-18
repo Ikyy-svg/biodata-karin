@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kayin Notes</title>
+<style>
+    body {
+        background: #ffb6c1; /* merah muda */
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        width: 80%;
+        margin: 30px auto;
+        border: 3px solid black;
+        padding: 0;
+        position: relative;
+        background: white;
+    }
+
+    /* Aksen bunga di pojok */
+    .corner {
+        width: 40px;
+        position: absolute;
+    }
+    .corner.top-left { top: -18px; left: -18px; }
+    .corner.top-right { top: -18px; right: -18px; }
+    .corner.bottom-left { bottom: -18px; left: -18px; }
+    .corner.bottom-right { bottom: -18px; right: -18px; }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    td {
+        border: 2px solid black;
+        vertical-align: top;
+        padding: 15px;
+    }
+
+    .menu a {
+        display: block;
+        margin: 10px 0;
+        cursor: pointer;
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+    }
+
+    .menu a:hover {
+        text-decoration: underline;
+    }
+
+    /* Kolom kanan */
+    #content {
+        min-height: 350px;
+        font-size: 16px;
+        white-space: pre-line;
+    }
+
+    img {
+        width: 150px;
+        border: 2px solid black;
+        margin-bottom: 15px;
+    }
+</style>
+
+<script>
+    function showBiodata() {
+        document.getElementById("content").innerHTML = `
+        <img src="karin.JPEG" alt="Foto Profil">
+
+        <b>NAMA :</b> ZYABILLA CHARYN.
+        <b>TEMPAT TANGGAL LAHIR :</b> OKU TIMUR, 30 NOVEMBER 2008.
+        <b>ALAMAT :</b> JL. KOL BURLIAN RT/RW 001/004 NO 457 TANJUNG KEMALA.
+        <b>EMAIL :</b> karinmpa3@gmail.com
+        <b>NO. HP :</b> +62 895-2340-0748
+
+        <b>PENDIDIKAN :</b>
+        SD : SDN 01 MARTAPURA
+        SMP : SMPN 02 MARTAPURA
+        SMA : SMAN 01 MARTAPURA
+        `;
+    }
+
+    function showMotivasi() {
+        document.getElementById("content").innerHTML = `
+        <b>Motivasi</b>
+
+        TIDAK ADA KATA TERLAMBAT BELAJAR UNTUK BELAJAR,
+        PERUBAHAN TERJADI KARNA KITA MAU BELAJAR.
+        `;
+    }
+</script>
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Aksen Bunga di 4 Sudut -->
+    <img src="bunga.PNG" class="corner top-left">
+    <img src="bunga.PNG" class="corner top-right">
+    <img src="bunga.PNG" class="corner bottom-left">
+    <img src="bunga.PNG" class="corner bottom-right">
+
+    <table>
+        <tr>
+            <td colspan="2" style="text-align:center; font-size:20px; font-weight:bold;">
+                ✨Kayin Notes✨
+            </td>
+        </tr>
+
+        <tr>
+            <!-- Menu -->
+            <td class="menu" style="width: 30%;">
+                MENU:<br><br>
+                <a onclick="showBiodata()">1. BIODATA</a>
+                <a onclick="showMotivasi()">2. KATA-KATA MOTIVASI</a>
+            </td>
+
+            <!-- Konten -->
+            <td id="content">
+                Klik menu di kiri untuk menampilkan isi.
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+</html>
